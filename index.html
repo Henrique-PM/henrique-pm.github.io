@@ -3,326 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="imagens/logo.png"/>
-    <title>Paulo Henrique | Dev </title>
+    <title>Paulo Henrique | Desenvolvedor Fullstack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo"><img src="imagens/logo.png"></div>
+            <a href="#" class="logo"><img src="imagens/logo.png" alt="Logo"></a>
             <nav>
                 <ul>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#photography">Fotografia</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
+            <button class="nav-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
-    
+
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#about" onclick="toggleNav()">Sobre</a></li>
+            <li><a href="#projects" onclick="toggleNav()">Projetos</a></li>
+            <li><a href="#contact" onclick="toggleNav()">Contato</a></li>
+        </ul>
+    </div>
+
     <section class="hero">
         <div class="container hero-content">
-            <h1>Desenvolvedor <span>Fullstack</span></h1>
-            <p>Crio soluções robustas para problemas complexos e capturo momentos únicos através das lentes.</p>
-            <a href="#projects" class="btn">Ver Projetos</a>
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Disponível para projetos
+                </div>
+                <h1>
+                    Desenvolvedor<br>
+                    <span class="gradient">Fullstack</span>
+                </h1>
+                <p>Crio soluções robustas e escaláveis, transformando ideias complexas em aplicações elegantes e funcionais.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Ver Projetos
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contato
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">developer.ts</span>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span><span class="code-keyword">const</span> <span class="code-variable">developer</span> = <span class="code-bracket">{</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span>&nbsp;&nbsp;name: <span class="code-string">"Paulo Henrique"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">3</span>
+                            <span>&nbsp;&nbsp;role: <span class="code-string">"Fullstack Developer"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">4</span>
+                            <span>&nbsp;&nbsp;location: <span class="code-string">"Rio de Janeiro"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">5</span>
+                            <span>&nbsp;&nbsp;skills: [</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">6</span>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Node.js"</span>, <span class="code-string">"Python"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">7</span>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"React"</span>, <span class="code-string">"TypeScript"</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">8</span>
+                            <span>&nbsp;&nbsp;],</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">9</span>
+                            <span>&nbsp;&nbsp;<span class="code-function">available</span>: <span class="code-keyword">true</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">10</span>
+                            <span><span class="code-bracket">}</span>;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
+
     <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>Sobre Mim</h2>
+            <div class="section-header">
+                <p class="section-label">// Sobre mim</p>
+                <h2 class="section-title">Transformando código em soluções</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Como fullstack, tenho a visão completa do ciclo de desenvolvimento, desde a concepção até a implementação. Isso me permite criar soluções integradas que realmente resolvem problemas.</p>
-                    <div class="skills">
-                        <span class="skill">Node.js</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">C / C++</span>
-                        <span class="skill">My SQL</span>
-                        <span class="skill">Flask</span>
-                        <span class="skill">React / Angular</span>
-                        <span class="skill">Swift</span>
-                        <span class="skill">Java</span>
+                    <p>Como desenvolvedor fullstack, possuo uma visão completa do ciclo de desenvolvimento de software — da concepção à implementação. Isso me permite criar soluções integradas que realmente resolvem problemas reais.</p>
+                    <p>Minha paixão por tecnologia me motiva a estar sempre aprendendo novas ferramentas e metodologias, buscando sempre as melhores práticas de desenvolvimento.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-node-js" style="color: #68a063;"></i></div>
+                        <span class="skill-name">Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python" style="color: #3776ab;"></i></div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-react" style="color: #61dafb;"></i></div>
+                        <span class="skill-name">React</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database" style="color: #f29111;"></i></div>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-java" style="color: #ed8b00;"></i></div>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-swift" style="color: #fa7343;"></i></div>
+                        <span class="skill-name">Swift</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-code" style="color: #00599c;"></i></div>
+                        <span class="skill-name">C / C++</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-angular" style="color: #dd0031;"></i></div>
+                        <span class="skill-name">Angular</span>
                     </div>
                 </div>
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="João Silva" style="width:100%; border-radius:10px;">
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projetos Concluídos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Tecnologias Dominadas</div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Projetos Recentes</h2>
+            <div class="section-header">
+                <p class="section-label">// Projetos</p>
+                <h2 class="section-title">Trabalhos recentes</h2>
             </div>
-            <div class="projects-container">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Projeto 1 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-img">
-                                    <img src="imagens/pucly.jpg" alt="Pucly">
-                                </div>
-                                <div class="project-info">
-                                    <h3>Pucly</h3>
-                                    <p>Plataforma online projetada para conectar estudantes de diferentes áreas do conhecimento, promovendo a colaboração e o compartilhamento de informações. .</p>
-                                    <div class="project-tech">
-                                        <span class="tech">Python</span>
-                                        <span class="tech">Django</span>
-                                        <span class="tech">PostgreSQL</span>
-                                        <span class="tech">Javascript</span>
-                                        <span class="tech">Html/Css</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/Henrique-PM/PUCLY"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="imagens/pucly.jpg" alt="Tela do projeto Pucly">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pucly</h3>
+                        <p>Plataforma online projetada para conectar estudantes de diferentes áreas do conhecimento, promovendo a colaboração e o compartilhamento de informações acadêmicas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
                         </div>
-                        
-                        <!-- Projeto 2 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-img">
-                                    <img src="imagens/arduino.png" alt="Arduino Uno Keyboard Emulator">
-                                </div>
-                                <div class="project-info">
-                                    <h3>Arduino Uno Keyboard Emulator</h3>
-                                    <p>Este projeto permite que um Arduino Uno simule a entrada de teclado ao pressionar botões conectados ao Arduino.</p>
-                                    <div class="project-tech">
-                                        <span class="tech">Python</span>
-                                        <span class="tech">C++</span>
-                                        <span class="tech">Arduíno</span>
-                                    
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/Henrique-PM/Arduino-Uno-Keyboard-Emulator"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Projeto 3 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-img">
-                                    <img src="imagens/pokedex.jpg" alt="Pokedex">
-                                </div>
-                                <div class="project-info">
-                                    <h3>Pokedex</h3>
-                                    <p>Uma Pokédex interativa utilizando a PokeAPI, uma API pública que fornece dados abrangentes sobre Pokémon. Este projeto demonstra suas habilidades em consumo de APIs RESTful, manipulação de dados assíncronos.</p>
-                                    <div class="project-tech">
-                                        <span class="tech">Javascript</span>
-                                        <span class="tech">Html/Css</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/Henrique-PM/Pokedex"><i class="fab fa-github"></i> Código</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Henrique-PM/PUCLY" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/arduino.png" alt="Circuito do projeto Arduino Keyboard Emulator">
+                    </div>
+                    <div class="project-content">
+                        <h3>Arduino Keyboard Emulator</h3>
+                        <p>Projeto que permite um Arduino Uno simular entrada de teclado ao pressionar botões físicos conectados.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Arduino</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Henrique-PM/Arduino-Uno-Keyboard-Emulator" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/pokedex.jpg" alt="Interface do projeto Pokédex">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pokédex</h3>
+                        <p>Pokédex interativa utilizando a PokeAPI, demonstrando habilidades em consumo de APIs RESTful e dados assíncronos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Henrique-PM/Pokedex" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="photography" class="photography">
-        <div class="container">
-            <div class="section-title">
-                <h2>Fotografia</h2>
-                <p style="text-align: center; margin-top: 1rem; opacity: 0.8;">Passe o mouse para ver os detalhes</p>
-            </div>
-            <div class="photo-grid">
-                <!-- Foto 1 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/cristo_hel.jpeg" alt="Retrato Cristo">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Retrato Urbano</h3>
-                        <p>Série "Meu Rio"</p>
-                        <p>Fotografia de rua</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Urca , RJ</p>
-                            <p><i class="far fa-calendar-alt"></i> 16/02/2024</p>
-                            <p><i class="far fa-clock"></i> 18:19</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Foto 2 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/cristo.jpg" alt="Retrato Cristo">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Retrato Urbano</h3>
-                        <p>Série "Meu Rio"</p>
-                        <p>Fotografia de Paisagens</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-                            <p><i class="far fa-calendar-alt"></i> 22/09/2023</p>
-                            <p><i class="far fa-clock"></i> 11:45</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Foto 3 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/close.jpeg" alt="Close-up">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Close-up</h3>
-                        <p>Série "Detalhes"</p>
-                        <p>Retrato artístico</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-                            <p><i class="far fa-calendar-alt"></i> 28/11/2023</p>
-                            <p><i class="far fa-clock"></i> 14:58</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Foto 4 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/toto.jpeg" alt="Retrato Conceitual">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Luz e Sombra</h3>
-                        <p>Série "NY"</p>
-                        <p>Retrato Abstrato</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Nova York, NY</p>
-                            <p><i class="far fa-calendar-alt"></i> 09/02/2024</p>
-                            <p><i class="far fa-clock"></i> 18:34</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Foto 5 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/musico.jpeg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "NY"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Nova York, NY</p>
-                            <p><i class="far fa-calendar-alt"></i> 10/02/2024</p>
-                            <p><i class="far fa-clock"></i> 11:54</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Foto 6 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/lagoa.jpeg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "NY"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Nova York, NY</p>
-                            <p><i class="far fa-calendar-alt"></i> 10/02/2024</p>
-                            <p><i class="far fa-clock"></i> 12:00</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Foto 7 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/bombeiro.jpeg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "NY"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Nova York, NY</p>
-                            <p><i class="far fa-calendar-alt"></i> 09/02/2024</p>
-                            <p><i class="far fa-clock"></i> 17:58</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Foto 8 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/praia.jpeg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "Detalhes"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-                            <p><i class="far fa-calendar-alt"></i> 28/11/2024</p>
-                            <p><i class="far fa-clock"></i> 14:15</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Foto 9 -->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/cop.jpeg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "NY"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">Nova York, NY</p>
-                            <p><i class="far fa-calendar-alt"></i> 16/02/2024</p>
-                            <p><i class="far fa-clock"></i> 16:25</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Foto 10-->
-                <div class="photo-card">
-                    <div class="photo-front">
-                        <img src="imagens/urca.jpg" alt="Retrato Artístico">
-                    </div>
-                    <div class="photo-back">
-                        <h3>Reflexões</h3>
-                        <p>Série "Meu Rio"</p>
-                        <p>Fotografia conceitual</p>
-                        <div class="photo-meta">
-                            <p><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
-                            <p><i class="far fa-calendar-alt"></i> 30/05/2023</p>
-                            <p><i class="far fa-clock"></i> 17:15</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Contato</h2>
+            <div class="section-header">
+                <p class="section-label">// Contato</p>
+                <h2 class="section-title">Vamos trabalhar juntos</h2>
             </div>
-            <div class="contact-content">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Vamos conversar!</h3>
-                    <p>Disponível para projetos de desenvolvimento e colaborações criativas.</p>
+                    <h3>Entre em contato</h3>
+                    <p>Disponível para projetos de desenvolvimento, colaborações e oportunidades de trabalho.</p>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -330,7 +265,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:joao@devphotographer.com">pmoncao971@gmail.com</a>
+                            <a href="mailto:pmoncao971@gmail.com">pmoncao971@gmail.com</a>
                         </div>
                     </div>
                     
@@ -344,61 +279,87 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="github-issues">
-                    <h3>Envie sua mensagem via GitHub</h3>
-                    <p>Para manter tudo organizado, utilize o sistema de issues do GitHub para entrar em contato comigo. Clique no botão abaixo para criar uma nova issue com sua mensagem.</p>
+
+                <div class="contact-card">
+                    <h3>Prefere GitHub?</h3>
+                    <p>Para manter tudo organizado, você também pode entrar em contato através do sistema de issues do GitHub.</p>
                     <a href="https://github.com/Henrique-PM/Portifolio_PauloHenrique/issues/new?template=contact.md" class="github-btn" target="_blank">
                         <i class="fab fa-github"></i> Criar Issue
                     </a>
-                    <p class="small" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Você precisará ter uma conta no GitHub para usar este método.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container footer-content">
             <div class="social-links">
-                <a href="https://github.com/Henrique-PM"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/paulo-henrique-monção/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/paulomoncao2/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Henrique-PM" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/paulo-henrique-monção/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/paulomoncao2/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-            <p class="copyright">© 2023 Paulo Henrique. Todos os direitos reservados.</p>
+            <p class="copyright">© 2026 Paulo Henrique. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
-    
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                },
-                1024: {
-                    slidesPerView: 1,
-                }
-            }
-        });
-     
+        // Mobile navigation toggle
+        function toggleNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Smooth scroll for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10, 10, 11, 0.95)';
+            } else {
+                header.style.background = 'rgba(10, 10, 11, 0.8)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .skill-item, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
         });
     </script>
 </body>
-
 </html>
-
