@@ -1,365 +1,727 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulo Henrique | Desenvolvedor Fullstack</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paulo Henrique Monção — Backend, IA e Segurança</title>
+<meta name="description" content="Paulo Henrique Monção, desenvolvedor backend no Instituto ECOA PUC-Rio e co-founder da Capi. Python, Ruby on Rails e OpenAI API. Estudando Segurança da Informação pela CASCO.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#0b0c0e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="#" class="logo"><img src="imagens/logo.png" alt="Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-            <button class="nav-toggle" onclick="toggleNav()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand" aria-label="Paulo Henrique"><span class="brand-mark">PH</span></a>
+    <nav class="nav-links">
+      <a href="#work" data-en="work">trabalho</a>
+      <a href="#projects" data-en="projects">projetos</a>
+      <a href="#timeline" data-en="path">trajetória</a>
+      <a href="#skills" data-en="skills">skills</a>
+      <a href="#about" data-en="about">sobre</a>
+      <a href="#contact" data-en="contact">contato</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" class="lang-btn is-on" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button id="burger" class="burger" aria-label="menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+  <div class="nav-drawer" id="drawer">
+    <a href="#work" data-en="work">trabalho</a>
+    <a href="#projects" data-en="projects">projetos</a>
+    <a href="#timeline" data-en="path">trajetória</a>
+    <a href="#skills" data-en="skills">skills</a>
+    <a href="#about" data-en="about">sobre</a>
+    <a href="#contact" data-en="contact">contato</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="idx">01</span> / index</p>
+    <h1 class="hero-h1 reveal" data-en="Backend, AI, and now<br><span class='mark'>security</span>.">
+      Backend, IA e agora<br>
+      <span class="mark">segurança</span>.
+    </h1>
+    <p class="hero-lead reveal" data-en="I'm Paulo Henrique, from Rio. I study Computer Science at PUC-Rio and work at <a href='https://ecoa.puc-rio.br' target='_blank' rel='noopener' class='ln'>Instituto ECOA</a>, building RESTful APIs, dashboards and data pipelines. I'm also a co-founder at <a href='https://heycapi.com' target='_blank' rel='noopener' class='ln'>Capi</a>. I study Information Security and compete with CASCO, PUC-Rio's cybersecurity team.">
+      Sou o Paulo Henrique, do Rio. Estudo Ciência da Computação na PUC-Rio e trabalho no
+      <a href="https://ecoa.puc-rio.br" target="_blank" rel="noopener" class="ln">Instituto ECOA</a>,
+      fazendo API RESTful, dashboard e pipeline de dados. Também sou co-founder da
+      <a href="https://heycapi.com" target="_blank" rel="noopener" class="ln">Capi</a>.
+      Estudo Segurança da Informação e compito pela CASCO, a equipe de cibersegurança da
+      PUC.
+    </p>
+    <div class="hero-cta reveal">
+      <a href="#work" class="btn" data-en="see work <span class='arr'>→</span>">
+        ver trabalho <span class="arr">→</span>
+      </a>
+      <a href="https://github.com/Henrique-PM" target="_blank" rel="noopener" class="btn ghost">github</a>
+    </div>
+    <div class="hero-foot reveal">
+      <div class="hf-item"><span class="hf-k" data-en="based in">base</span><span class="hf-v">Rio de Janeiro, BR</span></div>
+      <div class="hf-item"><span class="hf-k" data-en="today">hoje</span><span class="hf-v">ECOA PUC-Rio + Capi</span></div>
+      <div class="hf-item"><span class="hf-k" data-en="studying">estudando</span><span class="hf-v" data-en="Information Security">Segurança da Informação</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="block">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <p class="kicker"><span class="idx">02</span> / work</p>
+      <h2 class="block-title" data-en="Where I've worked">Onde trabalhei</h2>
     </header>
 
-    <div class="mobile-nav" id="mobileNav">
-        <ul>
-            <li><a href="#about" onclick="toggleNav()">Sobre</a></li>
-            <li><a href="#projects" onclick="toggleNav()">Projetos</a></li>
-            <li><a href="#contact" onclick="toggleNav()">Contato</a></li>
-        </ul>
+    <!-- CAPI -->
+    <article class="lead-work has-mascot reveal">
+      <img src="imagens/avatar.png" alt="Mascote da Capi" class="lw-mascot" width="1075" height="1266">
+      <div class="lw-top">
+        <div class="lw-meta">
+          <span class="badge"><span class="status-dot"></span> <span data-en="live">no ar</span></span>
+          <span class="lw-role">co-founder · fullstack</span>
+        </div>
+        <a href="https://heycapi.com" target="_blank" rel="noopener" class="lw-visit">heycapi.com <span class="arr">↗</span></a>
+      </div>
+
+      <div class="lw-brand">
+        <img src="imagens/capi.png" alt="Logo da Capi" class="lw-logo" width="758" height="762">
+        <div class="lw-brand-txt">
+          <h3 class="lw-name">Capi</h3>
+          <p class="lw-tagline" data-en="Agent that helps people get out of debt">Agente que ajuda pessoas a sair das dívidas</p>
+        </div>
+      </div>
+
+      <p class="lw-desc" data-en="Capi organizes someone's finances, works out what to pay first and sticks around until the debt is gone. Small team, I'm one of the founders, and it's already live with real users.">
+        A Capi organiza o financeiro da pessoa, calcula o que pagar primeiro e acompanha
+        até quitar. Time pequeno, sou um dos fundadores, e já está no ar com usuário de
+        verdade usando.
+      </p>
+      <ul class="lw-points">
+        <li><span class="pt-arrow">→</span> <span data-en="Backend, data model and a good chunk of the interface">Backend, modelo de dados e boa parte da interface</span></li>
+        <li><span class="pt-arrow">→</span> <span data-en="Agent layer on top of the financial flow, through the OpenAI API">Camada de agente em cima do fluxo financeiro, via OpenAI API</span></li>
+        <li><span class="pt-arrow">→</span> <span data-en="Eclectic team. I worked straight with designers, taking screens from Figma and implementing them.">Time bem eclético. Trabalhei direto com designers, pegando tela no Figma e implementando.</span></li>
+      </ul>
+      <div class="lw-tech">
+        <span class="chip">Python</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">React</span>
+        <span class="chip">OpenAI API</span>
+        <span class="chip">PostgreSQL</span>
+      </div>
+    </article>
+
+    <!-- ECOA -->
+    <article class="lead-work alt reveal">
+      <div class="lw-top">
+        <div class="lw-meta">
+          <span class="badge"><span class="status-dot"></span> 2023 — <span data-en="present">atual</span></span>
+          <span class="lw-role" data-en="fullstack developer">desenvolvedor full stack</span>
+        </div>
+        <span class="lw-visit muted">PUC-Rio</span>
+      </div>
+
+      <div class="lw-brand">
+        <span class="lw-logo mono-logo" aria-hidden="true">Ec</span>
+        <div class="lw-brand-txt">
+          <h3 class="lw-name">Instituto ECOA</h3>
+          <p class="lw-tagline">PUC-Rio · Petrobras</p>
+        </div>
+      </div>
+
+      <div class="role-block">
+        <div class="role">
+          <span class="role-when">2024 — <span data-en="present">atual</span></span>
+          <div class="role-body">
+            <h4 class="role-title" data-en="Fullstack Developer">Desenvolvedor Full Stack</h4>
+            <ul class="lw-points">
+              <li><span class="pt-arrow">→</span> <span data-en="RESTful APIs and interactive dashboards in Python (Flask/Django) and Ruby on Rails">API RESTful e dashboard interativo em Python (Flask/Django) e Ruby on Rails</span></li>
+              <li><span class="pt-arrow">→</span> <span data-en="Architecture built to grow, plus automated test pipelines">Arquitetura feita pra aguentar crescer, e pipeline de teste automatizado</span></li>
+              <li><span class="pt-arrow">→</span> <span data-en="Front/back integration and database tuning">Integração front/back e otimização de banco</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="role">
+          <span class="role-when">2023 — 2024</span>
+          <div class="role-body">
+            <h4 class="role-title" data-en="Software Developer (AI &amp; Web), with Petrobras">Desenvolvedor de Software (IA &amp; Web), com a Petrobras</h4>
+            <ul class="lw-points">
+              <li><span class="pt-arrow">→</span> <span data-en="Backend in Rails and Python plugged into the OpenAI APIs">Backend em Rails e Python plugado nas APIs da OpenAI</span></li>
+              <li><span class="pt-arrow">→</span> <span data-en="Web scraping tools and data pipelines">Ferramenta de web scraping e pipeline de dados</span></li>
+              <li><span class="pt-arrow">→</span> <span data-en="Agile team routine, with people from a lot of different areas">Rotina de time ágil, com gente de várias áreas diferentes</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="lw-tech">
+        <span class="chip">Ruby on Rails</span>
+        <span class="chip">Flask / Django</span>
+        <span class="chip">OpenAI API</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">Docker</span>
+      </div>
+    </article>
+
+    <!-- outros papéis -->
+    <div class="work-list">
+      <div class="wl-row static reveal">
+        <span class="wl-idx">01</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="Electronics Lead, Pegasus FSAE PUC-Rio">Líder de Eletrônica, Pegasus FSAE PUC-Rio</span>
+          <span class="wl-desc" data-en="Ran the electronics team on the Formula SAE car. Embedded systems for data acquisition, schedules, and the usual fight between hardware and software.">Toquei a equipe de eletrônica do carro de Fórmula SAE. Sistema embarcado pra aquisição de dados, cronograma, e a briga de sempre entre hardware e software.</span>
+        </span>
+        <span class="wl-tech">2023 — 2024</span>
+      </div>
+      <div class="wl-row static reveal">
+        <span class="wl-idx">02</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="Python Teaching Assistant, CTC/PUC-Rio">Monitor de Python, CTC/PUC-Rio</span>
+          <span class="wl-desc" data-en="Introduction to Programming (CTC4002). I corrected code and answered questions from people who were just starting out in Python.">Introdução à Programação (CTC4002). Corrigi código e tirei dúvida de gente que estava começando em Python.</span>
+        </span>
+        <span class="wl-tech">2023</span>
+      </div>
+      <div class="wl-row static reveal">
+        <span class="wl-idx">03</span>
+        <span class="wl-body">
+          <span class="wl-name">CASCO, PUC-Rio</span>
+          <span class="wl-desc" data-en="PUC-Rio's cybersecurity competition team. Where I take security off the page: CTFs and offensive practice next to people who compete.">Equipe de competição em cibersegurança da PUC-Rio. Onde eu tiro a segurança do papel: CTF e prática ofensiva do lado de gente que compete.</span>
+        </span>
+        <span class="wl-tech" data-en="present">atual</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="block">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <p class="kicker"><span class="idx">03</span> / projects</p>
+      <h2 class="block-title" data-en="Projects on GitHub">Projetos no GitHub</h2>
+    </header>
+
+    <div class="work-list">
+      <a href="https://github.com/Henrique-PM/Agente-football" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">01</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="Football AI Agent">Agente de IA de futebol</span>
+          <span class="wl-desc" data-en="Agent that answers questions about matches, teams and players. Object-oriented Python on top of the OpenAI APIs.">Agente que responde sobre partida, time e jogador. Python orientado a objetos em cima das APIs da OpenAI.</span>
+        </span>
+        <span class="wl-tech">Python · OpenAI</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM/Dashboard-Energia" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">02</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="Energy Dashboard">Dashboard de Energia</span>
+          <span class="wl-desc" data-en="Real-time panel for energy consumption and efficiency.">Painel em tempo real de consumo e eficiência energética.</span>
+        </span>
+        <span class="wl-tech">JavaScript · Handlebars</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM/Web-Scraping" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">03</span>
+        <span class="wl-body">
+          <span class="wl-name">Web Scraping Suite</span>
+          <span class="wl-desc" data-en="Large-scale data extraction for Instagram, YouTube and Pinterest.">Extração de dados em larga escala pra Instagram, YouTube e Pinterest.</span>
+        </span>
+        <span class="wl-tech">Python · ETL</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM/cibersecurity-desafio-ransomware" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">04</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="Cybersecurity challenges">Desafios de cibersegurança</span>
+          <span class="wl-desc" data-en="Ransomware and phishing exercises in Python. Study material, not production code, but it's where the security side started.">Exercícios de ransomware e phishing em Python. É material de estudo, não código de produção, mas foi por aí que a parte de segurança começou.</span>
+        </span>
+        <span class="wl-tech">Python · CTF</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM/PUCLY" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">05</span>
+        <span class="wl-body">
+          <span class="wl-name">PUCLY</span>
+          <span class="wl-desc" data-en="Platform to connect students from different fields so they can share material and answer each other's questions.">Plataforma pra conectar estudante de área diferente, trocar material e tirar dúvida.</span>
+        </span>
+        <span class="wl-tech">Python · Web</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM/Arduino-Uno-Keyboard-Emulator" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">06</span>
+        <span class="wl-body">
+          <span class="wl-name">Arduino Keyboard Emulator</span>
+          <span class="wl-desc" data-en="Arduino Uno emulating keyboard input from physical buttons.">Arduino Uno emulando entrada de teclado a partir de botão físico.</span>
+        </span>
+        <span class="wl-tech">C++ · Python</span>
+        <span class="wl-go">↗</span>
+      </a>
+      <a href="https://github.com/Henrique-PM?tab=repositories" target="_blank" rel="noopener" class="wl-row reveal">
+        <span class="wl-idx">+</span>
+        <span class="wl-body">
+          <span class="wl-name" data-en="The rest of the repos">O resto dos repos</span>
+          <span class="wl-desc" data-en="Docker, COVID APIs, cryptography, email automation and coursework.">Docker, APIs de COVID, criptografia, automação de e-mail e trabalho de faculdade.</span>
+        </span>
+        <span class="wl-tech">github.com/Henrique-PM</span>
+        <span class="wl-go">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="block">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <p class="kicker"><span class="idx">04</span> / timeline</p>
+      <h2 class="block-title" data-en="Study and work">Formação e trabalho</h2>
+    </header>
+
+    <div class="tl-filters reveal" role="group" aria-label="Filtrar trajetória">
+      <button type="button" class="tl-f is-on" data-filter="all" data-en="all">tudo</button>
+      <button type="button" class="tl-f" data-filter="work" data-en="work">trabalho</button>
+      <button type="button" class="tl-f" data-filter="study" data-en="study">formação</button>
     </div>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Disponível para projetos
-                </div>
-                <h1>
-                    Desenvolvedor<br>
-                    <span class="gradient">Fullstack</span>
-                </h1>
-                <p>Crio soluções robustas e escaláveis, transformando ideias complexas em aplicações elegantes e funcionais.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Ver Projetos
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Contato
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="code-header">
-                        <span class="code-dot red"></span>
-                        <span class="code-dot yellow"></span>
-                        <span class="code-dot green"></span>
-                        <span class="code-title">developer.ts</span>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-line">
-                            <span class="line-number">1</span>
-                            <span><span class="code-keyword">const</span> <span class="code-variable">developer</span> = <span class="code-bracket">{</span></span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">2</span>
-                            <span>&nbsp;&nbsp;name: <span class="code-string">"Paulo Henrique"</span>,</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">3</span>
-                            <span>&nbsp;&nbsp;role: <span class="code-string">"Fullstack Developer"</span>,</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">4</span>
-                            <span>&nbsp;&nbsp;location: <span class="code-string">"Rio de Janeiro"</span>,</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">5</span>
-                            <span>&nbsp;&nbsp;skills: [</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">6</span>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Node.js"</span>, <span class="code-string">"Python"</span>,</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">7</span>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"React"</span>, <span class="code-string">"TypeScript"</span></span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">8</span>
-                            <span>&nbsp;&nbsp;],</span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">9</span>
-                            <span>&nbsp;&nbsp;<span class="code-function">available</span>: <span class="code-keyword">true</span></span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">10</span>
-                            <span><span class="code-bracket">}</span>;</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <ol class="timeline">
+      <!-- AJUSTAR: o ano de início da Capi não estava no currículo. -->
+      <li class="tl-item reveal" data-track="work">
+        <span class="tl-year">2025 — <span data-en="now">hoje</span></span>
+        <span class="tl-dot live"></span>
+        <div class="tl-card">
+          <span class="tl-tag work" data-en="work">trabalho</span>
+          <h3 class="tl-title">Capi, co-founder</h3>
+          <p class="tl-desc" data-en="Backend, data model and interface. Daily routine next to design and product, which is where I got used to building with people who aren't engineers.">
+            Backend, modelo de dados e interface. Rotina diária do lado de design e produto,
+            que foi onde eu me acostumei a construir com gente que não é da engenharia.
+          </p>
         </div>
-    </section>
+      </li>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">// Sobre mim</p>
-                <h2 class="section-title">Transformando código em soluções</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Como desenvolvedor fullstack, possuo uma visão completa do ciclo de desenvolvimento de software — da concepção à implementação. Isso me permite criar soluções integradas que realmente resolvem problemas reais.</p>
-                    <p>Minha paixão por tecnologia me motiva a estar sempre aprendendo novas ferramentas e metodologias, buscando sempre as melhores práticas de desenvolvimento.</p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-node-js" style="color: #68a063;"></i></div>
-                        <span class="skill-name">Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-python" style="color: #3776ab;"></i></div>
-                        <span class="skill-name">Python</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-react" style="color: #61dafb;"></i></div>
-                        <span class="skill-name">React</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-database" style="color: #f29111;"></i></div>
-                        <span class="skill-name">MySQL</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-java" style="color: #ed8b00;"></i></div>
-                        <span class="skill-name">Java</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-swift" style="color: #fa7343;"></i></div>
-                        <span class="skill-name">Swift</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-code" style="color: #00599c;"></i></div>
-                        <span class="skill-name">C / C++</span>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fab fa-angular" style="color: #dd0031;"></i></div>
-                        <span class="skill-name">Angular</span>
-                    </div>
-                </div>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label">Anos de Experiência</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Projetos Concluídos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8+</div>
-                    <div class="stat-label">Tecnologias Dominadas</div>
-                </div>
-            </div>
+      <li class="tl-item reveal" data-track="study">
+        <span class="tl-year">2025 — <span data-en="now">hoje</span></span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag study" data-en="study">formação</span>
+          <h3 class="tl-title" data-en="Information Security, CASCO PUC-Rio">Segurança da Informação, CASCO PUC-Rio</h3>
+          <p class="tl-desc" data-en="Networking and network security, attack types and surface, vulnerabilities, zero-days, cryptography, and the management side, policy and ISMS. The theory is in place; what I'm closing now is the practical half, competing with CASCO.">
+            Rede e segurança de rede, tipos de ataque e superfície, vulnerabilidade,
+            zero-day, criptografia, e o lado de gestão, PSI e SGSI. A teoria está de pé; o
+            que estou fechando agora é a metade prática, competindo pela CASCO.
+          </p>
         </div>
-    </section>
+      </li>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">// Projetos</p>
-                <h2 class="section-title">Trabalhos recentes</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <img src="imagens/pucly.jpg" alt="Tela do projeto Pucly">
-                    </div>
-                    <div class="project-content">
-                        <h3>Pucly</h3>
-                        <p>Plataforma online projetada para conectar estudantes de diferentes áreas do conhecimento, promovendo a colaboração e o compartilhamento de informações acadêmicas.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Henrique-PM/PUCLY" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="imagens/arduino.png" alt="Circuito do projeto Arduino Keyboard Emulator">
-                    </div>
-                    <div class="project-content">
-                        <h3>Arduino Keyboard Emulator</h3>
-                        <p>Projeto que permite um Arduino Uno simular entrada de teclado ao pressionar botões físicos conectados.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Arduino</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Henrique-PM/Arduino-Uno-Keyboard-Emulator" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="imagens/pokedex.jpg" alt="Interface do projeto Pokédex">
-                    </div>
-                    <div class="project-content">
-                        <h3>Pokédex</h3>
-                        <p>Pokédex interativa utilizando a PokeAPI, demonstrando habilidades em consumo de APIs RESTful e dados assíncronos.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">API REST</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Henrique-PM/Pokedex" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <li class="tl-item reveal" data-track="work">
+        <span class="tl-year">2024 — <span data-en="now">hoje</span></span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag work" data-en="work">trabalho</span>
+          <h3 class="tl-title" data-en="Fullstack Developer, Instituto ECOA PUC-Rio">Desenvolvedor Full Stack, Instituto ECOA PUC-Rio</h3>
+          <p class="tl-desc" data-en="RESTful APIs and interactive dashboards in Python (Flask/Django) and Ruby on Rails, plus automated test pipelines and database tuning.">
+            API RESTful e dashboard interativo em Python (Flask/Django) e Ruby on Rails,
+            mais pipeline de teste automatizado e otimização de banco.
+          </p>
         </div>
-    </section>
+      </li>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">// Contato</p>
-                <h2 class="section-title">Vamos trabalhar juntos</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Entre em contato</h3>
-                    <p>Disponível para projetos de desenvolvimento, colaborações e oportunidades de trabalho.</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:pmoncao971@gmail.com">pmoncao971@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Rio de Janeiro, Brasil</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <h3>Prefere GitHub?</h3>
-                    <p>Para manter tudo organizado, você também pode entrar em contato através do sistema de issues do GitHub.</p>
-                    <a href="https://github.com/Henrique-PM/Portifolio_PauloHenrique/issues/new?template=contact.md" class="github-btn" target="_blank">
-                        <i class="fab fa-github"></i> Criar Issue
-                    </a>
-                </div>
-            </div>
+      <li class="tl-item reveal" data-track="work">
+        <span class="tl-year">2023 — 2024</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag work" data-en="work">trabalho</span>
+          <h3 class="tl-title" data-en="Software Developer (AI &amp; Web), ECOA + Petrobras">Desenvolvedor de Software (IA &amp; Web), ECOA + Petrobras</h3>
+          <p class="tl-desc" data-en="Backend in Ruby on Rails and Python wired to the OpenAI APIs, web scraping tools and data pipelines, inside a multidisciplinary agile team.">
+            Backend em Ruby on Rails e Python ligado às APIs da OpenAI, ferramenta de web
+            scraping e pipeline de dados, dentro de um time ágil multidisciplinar.
+          </p>
         </div>
-    </section>
+      </li>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="social-links">
-                <a href="https://github.com/Henrique-PM" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/paulo-henrique-monção/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/paulomoncao2/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <p class="copyright">© 2026 Paulo Henrique. Todos os direitos reservados.</p>
+      <li class="tl-item reveal" data-track="work">
+        <span class="tl-year">2023 — 2024</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag work" data-en="work">trabalho</span>
+          <h3 class="tl-title" data-en="Electronics Lead, Pegasus FSAE">Líder de Eletrônica, Pegasus FSAE</h3>
+          <p class="tl-desc" data-en="I ran the electronics team on the Formula SAE car. Embedded systems for data acquisition, schedules, task splitting and chasing people until the car ran.">
+            Toquei a equipe de eletrônica do carro de Fórmula SAE. Sistema embarcado pra
+            aquisição de dados, cronograma, divisão de tarefa e cobrança até o carro rodar.
+          </p>
         </div>
-    </footer>
+      </li>
 
-    <script>
-        // Mobile navigation toggle
-        function toggleNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
-        }
+      <li class="tl-item reveal" data-track="work">
+        <span class="tl-year">2023</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag work" data-en="work">trabalho</span>
+          <h3 class="tl-title" data-en="Python Teaching Assistant, CTC/PUC-Rio">Monitor de Python, CTC/PUC-Rio</h3>
+          <p class="tl-desc" data-en="Introduction to Programming (CTC4002). Correcting code and answering questions from people in their first semester.">
+            Introdução à Programação (CTC4002). Corrigindo código e tirando dúvida de gente
+            no primeiro período.
+          </p>
+        </div>
+      </li>
 
-        // Smooth scroll for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+      <li class="tl-item reveal" data-track="study">
+        <span class="tl-year">2023 — 2026</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag study" data-en="study">formação</span>
+          <h3 class="tl-title" data-en="BSc in Computer Science, PUC-Rio">Ciência da Computação, PUC-Rio</h3>
+          <p class="tl-desc" data-en="Algorithms, data structures and C. The base everything else sits on.">
+            Algoritmo, estrutura de dados e C. A base em que o resto se apoia.
+          </p>
+        </div>
+      </li>
 
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(10, 10, 11, 0.95)';
-            } else {
-                header.style.background = 'rgba(10, 10, 11, 0.8)';
-            }
-        });
+      <li class="tl-item reveal" data-track="study">
+        <span class="tl-year">2019 — 2021</span>
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <span class="tl-tag study" data-en="study">formação</span>
+          <h3 class="tl-title" data-en="High School, Military College of Rio de Janeiro">Ensino Médio, Colégio Militar do Rio de Janeiro</h3>
+          <p class="tl-desc" data-en="Three years in a military routine, plus horseback riding and volleyball. Hierarchy, deadlines and taking responsibility for your own part came from here, and they still hold.">
+            Três anos de rotina militar, mais equitação e voleibol. Hierarquia, prazo e
+            responsabilidade pela sua parte vieram daqui, e continuam valendo.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
 
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<!-- SKILLS -->
+<section id="skills" class="block">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <p class="kicker"><span class="idx">05</span> / skills</p>
+      <h2 class="block-title" data-en="Level by technology">Nível por tecnologia</h2>
+    </header>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+    <div class="skill-legend reveal">
+      <span class="sl-item" data-en="basic">básico</span>
+      <span class="sl-sep">·</span>
+      <span class="sl-item" data-en="intermediate">intermediário</span>
+      <span class="sl-sep">·</span>
+      <span class="sl-item" data-en="advanced">avançado</span>
+    </div>
 
-        document.querySelectorAll('.project-card, .skill-item, .contact-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(el);
-        });
-    </script>
+    <div class="skill-grid">
+      <div class="skill-col reveal">
+        <p class="sc-label">// backend</p>
+        <ul class="skill-list">
+          <li class="skill" style="--lvl:92%">
+            <span class="sk-name">Python</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:85%">
+            <span class="sk-name">Flask / Django</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:82%">
+            <span class="sk-name">Ruby on Rails</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:60%">
+            <span class="sk-name">Java</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-col reveal">
+        <p class="sc-label">// frontend</p>
+        <ul class="skill-list">
+          <li class="skill" style="--lvl:84%">
+            <span class="sk-name">JavaScript / TS</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:80%">
+            <span class="sk-name">React</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:78%">
+            <span class="sk-name">HTML / CSS</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:55%">
+            <span class="sk-name">Angular</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-col reveal">
+        <p class="sc-label">// data &amp; ia</p>
+        <ul class="skill-list">
+          <li class="skill" style="--lvl:85%">
+            <span class="sk-name" data-en="OpenAI / agents">OpenAI / agentes</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:82%">
+            <span class="sk-name">PostgreSQL</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:80%">
+            <span class="sk-name">Scraping / ETL</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:65%">
+            <span class="sk-name">MongoDB</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-col reveal">
+        <p class="sc-label">// devops &amp; systems</p>
+        <ul class="skill-list">
+          <li class="skill" style="--lvl:82%">
+            <span class="sk-name">Git + Actions</span>
+            <span class="sk-lvl" data-en="advanced">avançado</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:70%">
+            <span class="sk-name">Docker</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:65%">
+            <span class="sk-name" data-en="C / embedded">C / embarcados</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+          <li class="skill" style="--lvl:58%">
+            <span class="sk-name">AWS</span>
+            <span class="sk-lvl" data-en="intermediate">intermediário</span>
+            <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- para onde estou indo -->
+    <div class="now reveal">
+      <div class="now-main">
+        <p class="sc-label">// <span data-en="where i'm heading">pra onde estou indo</span></p>
+        <h3 class="now-t" data-en="Cybersecurity">Cibersegurança</h3>
+        <p class="now-d" data-en="The theory I already have: networking and network security, attack types and surface, vulnerabilities and zero-days, cryptography, and the management side too, policy and ISMS. On top of that, three years writing backend, which is what lets me look at a system already knowing how it was put together. What I'm building now is the hands-on half: CTFs and offensive practice, where I still get beaten up, which is exactly why I'm training.">
+          A teoria eu já tenho: rede e segurança de rede, tipos de ataque e superfície,
+          vulnerabilidade e zero-day, criptografia, e também o lado de gestão, PSI e SGSI.
+          Em cima disso, três anos escrevendo backend, que é o que faz eu olhar um sistema
+          já sabendo por onde ele foi construído. O que estou construindo agora é a metade
+          prática: CTF e prática ofensiva, onde eu ainda apanho, e é exatamente por isso
+          que estou treinando.
+        </p>
+        <p class="now-meta">
+          <span class="now-k" data-en="team">equipe</span>
+          <span data-en="CASCO, PUC-Rio's cybersecurity competition team">CASCO, equipe de competição em cibersegurança da PUC-Rio</span>
+        </p>
+      </div>
+
+      <ul class="skill-list now-bars">
+        <li class="skill" style="--lvl:80%">
+          <span class="sk-name" data-en="Vulnerabilities and zero-days">Vulnerabilidade e zero-day</span>
+          <span class="sk-lvl" data-en="advanced">avançado</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+        <li class="skill" style="--lvl:75%">
+          <span class="sk-name" data-en="Attack types and surface">Tipos de ataque e superfície</span>
+          <span class="sk-lvl" data-en="intermediate">intermediário</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+        <li class="skill" style="--lvl:74%">
+          <span class="sk-name" data-en="Security management (policy, ISMS)">Gestão de SI (PSI, SGSI)</span>
+          <span class="sk-lvl" data-en="intermediate">intermediário</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+        <li class="skill" style="--lvl:72%">
+          <span class="sk-name" data-en="Networks and network security">Rede e segurança de rede</span>
+          <span class="sk-lvl" data-en="intermediate">intermediário</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+        <li class="skill" style="--lvl:68%">
+          <span class="sk-name" data-en="Cryptography">Criptografia</span>
+          <span class="sk-lvl" data-en="intermediate">intermediário</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+        <li class="skill" style="--lvl:35%">
+          <span class="sk-name" data-en="Offensive practice (CTF)">Prática ofensiva (CTF)</span>
+          <span class="sk-lvl" data-en="basic, and in progress">básico, e em construção</span>
+          <span class="sk-track" aria-hidden="true"><span class="sk-fill"></span></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- competências -->
+    <div class="soft reveal">
+      <p class="sc-label">// <span data-en="how i work">como eu trabalho</span></p>
+      <div class="soft-grid">
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Deadlines and responsibility">Prazo e responsabilidade</h4>
+          <p class="soft-d" data-en="Three years at the Military College of Rio. Hierarchy, deadlines and owning your part are the things that stuck hardest, and they're still how I work.">Três anos de Colégio Militar do Rio. Hierarquia, prazo e responsabilidade pela sua parte foram o que mais ficou, e continua sendo o jeito que eu trabalho.</p>
+        </div>
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Leadership">Liderança</h4>
+          <p class="soft-d" data-en="I ran the electronics team at Pegasus FSAE. Schedule, task splitting and chasing people until the car ran.">Liderei a eletrônica na Pegasus FSAE. Cronograma, divisão de tarefa e cobrança, até o carro rodar.</p>
+        </div>
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Continuous learning">Aprendizado contínuo</h4>
+          <p class="soft-d" data-en="From C fundamentals to AI agents in production in three years. Now: security.">Do fundamento em C a agente de IA em produção em três anos. Agora: segurança.</p>
+        </div>
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Collaboration">Colaboração</h4>
+          <p class="soft-d" data-en="Multidisciplinary agile teams at ECOA, designers and product at Capi. I like the part where the areas meet.">Time ágil multidisciplinar no ECOA, designers e produto na Capi. Gosto da parte onde as áreas se encontram.</p>
+        </div>
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Analytical reasoning">Raciocínio analítico</h4>
+          <p class="soft-d" data-en="Cybersecurity competitions with CASCO, and three years of debugging other people's backends.">Competição de cibersegurança pela CASCO, e três anos debugando backend dos outros.</p>
+        </div>
+        <div class="soft-item">
+          <h4 class="soft-t" data-en="Languages">Idiomas</h4>
+          <p class="soft-d" data-en="Portuguese (native) and English.">Português (nativo) e inglês.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="block">
+  <div class="wrap">
+    <header class="block-head reveal">
+      <p class="kicker"><span class="idx">06</span> / about</p>
+      <h2 class="block-title" data-en="About">Sobre</h2>
+    </header>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <p class="about-lead" data-en="I'm a backend developer who ended up doing fullstack, because I like seeing the whole product: from the database schema to the last state of the screen.">
+          Sou desenvolvedor backend que acabou fazendo fullstack, porque gosto de enxergar
+          o produto todo: do schema do banco ao último estado da tela.
+        </p>
+        <p data-en="At Instituto ECOA that means RESTful APIs, dashboards and data pipelines, including work with Petrobras. At Capi it means shipping and finding out on Monday whether it worked.">
+          No Instituto ECOA isso quer dizer API RESTful, dashboard e pipeline de dados,
+          incluindo trabalho com a Petrobras. Na Capi quer dizer colocar no ar e descobrir
+          na segunda se funcionou.
+        </p>
+        <p data-en="Before all that I spent three years at the Military College of Rio. That's where the boring part came from: schedule, hierarchy, and answering for your piece of the work. It's the part of me that got me through leading the electronics team at Pegasus FSAE.">
+          Antes disso tudo passei três anos no Colégio Militar do Rio. Foi de lá que veio a
+          parte chata: cronograma, hierarquia, e responder pelo seu pedaço do trabalho. É a
+          parte de mim que me segurou liderando a eletrônica da Pegasus FSAE.
+        </p>
+        <p data-en="Right now I'm turning toward security. The theory is already there, from networking and cryptography to attack surface and the management side, policy and ISMS. What I'm closing is the practical half, competing with CASCO. I'm looking for a place to do this full time, ideally one where the backend side counts too.">
+          Agora estou virando pra segurança. A teoria já está aí, de rede e criptografia a
+          superfície de ataque e o lado de gestão, PSI e SGSI. O que estou fechando é a
+          metade prática, competindo pela CASCO. Procuro um lugar pra fazer isso em tempo
+          integral, de preferência onde o lado de backend também conte.
+        </p>
+
+        <div class="about-facts">
+          <div class="fact">
+            <span class="fact-v">3</span>
+            <span class="fact-k" data-en="years of backend">anos de backend</span>
+          </div>
+          <div class="fact">
+            <span class="fact-v">2</span>
+            <span class="fact-k" data-en="ECOA and Capi">ECOA e Capi</span>
+          </div>
+          <div class="fact">
+            <span class="fact-v">20+</span>
+            <span class="fact-k" data-en="public repos">repos públicos</span>
+          </div>
+          <div class="fact">
+            <span class="fact-v">1</span>
+            <span class="fact-k" data-en="product live">produto no ar</span>
+          </div>
+        </div>
+      </div>
+      <aside class="about-side reveal">
+        <div class="side-card">
+          <p class="side-head">// <span data-en="summary">resumo</span></p>
+          <div class="side-row"><span class="side-k" data-en="role">papel</span><span class="side-v" data-en="Backend &amp; Fullstack">Backend &amp; Fullstack</span></div>
+          <div class="side-row"><span class="side-k" data-en="company">empresa</span><span class="side-v">Capi, co-founder</span></div>
+          <div class="side-row"><span class="side-k" data-en="institute">instituto</span><span class="side-v">ECOA PUC-Rio</span></div>
+          <div class="side-row"><span class="side-k" data-en="studies">formação</span><span class="side-v" data-en="CS · PUC-Rio (2023–26)">Ciência da Computação · PUC-Rio</span></div>
+          <div class="side-row"><span class="side-k" data-en="goal">objetivo</span><span class="side-v" data-en="Cybersecurity">Cibersegurança</span></div>
+          <div class="side-row"><span class="side-k" data-en="base">base</span><span class="side-v">Rio de Janeiro, BR</span></div>
+          <div class="side-row"><span class="side-k" data-en="status">status</span><span class="side-v"><span class="status-dot"></span> <span data-en="open to work">aberto a proposta</span></span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="block contact">
+  <div class="wrap">
+    <p class="kicker reveal"><span class="idx">07</span> / contact</p>
+    <h2 class="contact-h reveal" data-en="Want to talk?<br>I answer.">Quer conversar?<br>Eu respondo.</h2>
+    <p class="contact-lead reveal" data-en="Projects, partnerships, or a security role. Just say what it is and I'll get back to you.">Projeto, parceria, ou vaga em segurança. Só dizer o que é que eu retorno.</p>
+    <div class="contact-links reveal">
+      <a href="mailto:pmoncao971@gmail.com" class="cl-row">
+        <span class="cl-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6Zm-2 0-8 5-8-5h16Zm0 12H4V8l8 5 8-5v10Z"/></svg>
+        </span>
+        <span class="cl-k">email</span>
+        <span class="cl-v">pmoncao971@gmail.com</span>
+        <span class="arr">→</span>
+      </a>
+      <a href="https://github.com/Henrique-PM" target="_blank" rel="noopener" class="cl-row">
+        <span class="cl-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.2 11.16.6.1.82-.25.82-.56v-2.17c-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.34-1.73-1.34-1.73-1.09-.73.08-.71.08-.71 1.2.08 1.84 1.21 1.84 1.21 1.07 1.8 2.8 1.28 3.49.98.11-.76.42-1.28.76-1.57-2.67-.29-5.47-1.31-5.47-5.83 0-1.29.47-2.34 1.24-3.17-.13-.29-.54-1.49.12-3.11 0 0 1.01-.32 3.3 1.21a11.6 11.6 0 0 1 6 0c2.29-1.53 3.3-1.21 3.3-1.21.66 1.62.25 2.82.12 3.11.77.83 1.24 1.88 1.24 3.17 0 4.53-2.8 5.53-5.48 5.82.43.36.81 1.09.81 2.2v3.26c0 .31.21.67.83.56A11.8 11.8 0 0 0 24 12.29C24 5.78 18.63.5 12 .5Z"/></svg>
+        </span>
+        <span class="cl-k">github</span>
+        <span class="cl-v">/Henrique-PM</span>
+        <span class="arr">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/paulo-henrique-monção/" target="_blank" rel="noopener" class="cl-row">
+        <span class="cl-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+        </span>
+        <span class="cl-k">linkedin</span>
+        <span class="cl-v">/in/paulo-henrique-monção</span>
+        <span class="arr">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span class="foot-brand">PH</span>
+    <span class="foot-copy">© 2026 Paulo Henrique Monção · Rio de Janeiro</span>
+    <a href="#top" class="foot-top" data-en="top ↑">topo ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
